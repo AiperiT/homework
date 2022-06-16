@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Calculate</h1>
+<form action="" method="post">
+    {% csrf_token %}
+    <br><label>Fist Number:</label>
+    <input type="number" name="first_number"/><br/>
+    <br><label>Second Number:</label>
+    <input type="number" name="second_number"/><br/>
+    <p><input type="radio" name="action" value="add" checked> add</p>
+    <p><input type="radio" name="action" value="subtract"> subtract</p>
+    <p><input type="radio" name="action" value="multiply"> multiply</p>
+    <p><input type="radio" name="action" value="divide"> divide</p>
+    <br/>
+    <br><input type="submit" value="Calculate"/>
+
+    <h2> Result : {{ first_number }} {{ action }} {{ second_number}} = {{result}} </h2>
+</form>
+
+</body>
+</html>
